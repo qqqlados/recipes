@@ -58,10 +58,13 @@ such as query keywords, cuisine type, and maximum preparation time. It fetches d
 ## Screenshots
 
 - Home Page:
+
   ![alt text]({B39225F1-7DC2-4EBF-9508-FD5899444FC1}.png)
 
 - Recipes Page:
+
   ![alt text]({4A9F7515-218D-42FA-BDBB-B9365704DDE6}.png)
 
 - Detailed Recipe Page:
+
   ![alt text]({8CD684E6-54A3-40D2-A419-50EAF8F7224E}.png)
