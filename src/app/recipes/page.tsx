@@ -1,16 +1,29 @@
 import RecipesPageSkeletons from '@/components/ui/skeletons/recipes-page-skeletons'
 import { Suspense } from 'react'
-
 import RecipesList from './recipes-list'
 
-export default async function Recipes({ searchParams }: { searchParams: { query: string; cuisine: string; maxReadyTime: string } }) {
+interface SearchParams {
+	query: string
+	cuisine: string
+	maxReadyTime: string
+}
+
+interface RecipesPageProps {
+	searchParams: SearchParams
+}
+
+export default async function Recipes({ searchParams }: RecipesPageProps) {
 	return (
 		<div className='flex flex-col gap-10'>
-			<p className='text-center text-lg'>Recipes</p>
+			<header>
+				<h1 className='text-center text-lg font-semibold'>Recipes</h1>
+			</header>
 
-			<Suspense fallback={<RecipesPageSkeletons />}>
-				<RecipesList searchParams={searchParams} />
-			</Suspense>
+			<main>
+				<Suspense fallback={<RecipesPageSkeletons />}>
+					<RecipesList searchParams={searchParams} />
+				</Suspense>
+			</main>
 		</div>
 	)
 }
